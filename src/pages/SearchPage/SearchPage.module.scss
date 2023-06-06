@@ -1,0 +1,85 @@
+@import "../../colors.scss";
+
+.root {
+  h3 {
+    color: red;
+  }
+  h2 {
+    font-weight: normal;
+    position: relative;
+    margin-bottom: 50px;
+    &::before {
+      content: "";
+      position: absolute;
+      height: 2px;
+      width: 40px;
+      bottom: -50%;
+      background: $blue;
+    }
+  }
+  .printers {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+    .printer {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      width: 100%;
+      padding-top: 20px;
+
+      margin: 0 auto;
+
+      border: 1px solid #dadada;
+      img {
+        width: 100%;
+        object-fit: contain;
+        max-width: 215px;
+        height: 215px;
+      }
+      .text {
+        width: 100%;
+        padding: 0 14px 14px;
+        h4 {
+          padding: 15px 0 15px 0;
+          color: #191919;
+          margin-bottom: 0;
+          letter-spacing: 1px;
+          font-size: 15px;
+        }
+        h5 {
+          font-size: 15px;
+          font-weight: normal;
+        }
+        button {
+          width: 100%;
+          margin-top: 10px;
+          letter-spacing: 1px;
+          color: $blue;
+          text-transform: uppercase;
+          cursor: pointer;
+          padding: 10px;
+          background: none;
+          border: 2px solid $blue;
+          transition: 300ms;
+          &:hover {
+            color: #fff;
+            background: $blue;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 1400px) {
+  .printers {
+    grid-template-columns: 1fr 1fr !important;
+  }
+}
+
+@media (max-width: 650px) {
+  .printers {
+    grid-template-columns: 1fr !important;
+  }
+}

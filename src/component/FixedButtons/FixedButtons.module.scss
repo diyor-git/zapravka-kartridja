@@ -1,0 +1,91 @@
+.root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+
+  .call,
+  .telegram {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 60px;
+    height: 60px;
+
+    color: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+  .call {
+    font-size: 30px;
+    background-color: #005a9c;
+
+    animation: hoverWave 2s linear 2s infinite;
+  }
+
+  .telegram {
+    color: #27a6e6;
+    background: #fff;
+    font-size: 62px;
+  }
+
+  a {
+    text-decoration: none;
+    color: transparent;
+  }
+}
+
+@keyframes motion {
+  from {
+    transform: rotate(-45deg);
+  }
+  to {
+    transform: rotate(45deg);
+  }
+}
+
+@keyframes hoverWave {
+  0% {
+    box-shadow: 0 8px 10px rgba(56, 163, 253, 0.3),
+      0 0 0 0 rgba(56, 163, 253, 0.2), 0 0 0 0 rgba(56, 163, 253, 0.2);
+  }
+  40% {
+    box-shadow: 0 8px 10px rgba(56, 163, 253, 0.3),
+      0 0 0 15px rgba(56, 163, 253, 0.2), 0 0 0 0 rgba(56, 163, 253, 0.2);
+  }
+  80% {
+    box-shadow: 0 8px 10px rgba(56, 163, 253, 0.3),
+      0 0 0 30px rgba(56, 163, 253, 0), 0 0 0 26.7px rgba(56, 163, 253, 0.067);
+  }
+  100% {
+    box-shadow: 0 8px 10px rgba(56, 163, 253, 0.3),
+      0 0 0 30px rgba(56, 163, 253, 0), 0 0 0 40px rgba(56, 163, 253, 0);
+  }
+}
+
+@media (max-width: 700px) {
+  .root {
+    gap: 20px;
+
+    bottom: 25px;
+    right: 25px;
+
+    .call {
+      width: 50px;
+      height: 50px;
+
+      font-size: 20px;
+    }
+
+    .telegram {
+      font-size: 50px;
+    }
+  }
+}

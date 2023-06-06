@@ -1,0 +1,49 @@
+@import "../../../colors.scss";
+
+.root {
+  background-color: $water;
+
+  .nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .link {
+      padding: 20px;
+
+      font-size: 13px;
+      font-weight: 700;
+      color: #fff;
+      text-transform: uppercase;
+      text-decoration: none;
+
+      transition: 0.2s;
+
+      &:hover {
+        background-color: $darkWater;
+      }
+
+      &.active {
+        background-color: $darkWater;
+      }
+    }
+  }
+}
+
+@media (max-width: 925px) {
+  .root {
+    .nav {
+      .link {
+        font-size: 12px;
+        padding: 15px 10px;
+      }
+    }
+  }
+}
+@media (max-width: 850px) {
+  .root {
+    .nav {
+      display: none;
+    }
+  }
+}

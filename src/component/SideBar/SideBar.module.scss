@@ -1,0 +1,143 @@
+@import "../../colors.scss";
+
+.root {
+  width: 100%;
+  p {
+    margin-bottom: 0 !important;
+  }
+  .body {
+    border: 1px solid #dddddd;
+    border-top: none;
+    border-radius: 0 0 10px 10px;
+    background-color: #f4f2f3;
+  }
+
+  .head {
+    width: 100%;
+    padding: 13px 0;
+
+    position: relative;
+
+    text-align: center;
+    font-weight: 700;
+    color: white;
+    border-radius: 10px 10px 0 0;
+    background-color: $water;
+  }
+
+  .head::after {
+    display: block;
+    content: "";
+    position: absolute;
+    bottom: 2px;
+
+    width: 100%;
+    height: 0.7px;
+
+    background-color: white;
+  }
+
+  hr {
+    width: 90%;
+    margin: 0 auto;
+
+    border: none;
+    border-bottom: 1px solid #c5c3c4;
+  }
+
+  .item {
+    padding: 20px;
+
+    h5 {
+      margin-bottom: 15px;
+
+      font-size: 13px;
+      text-transform: uppercase;
+    }
+
+    .link {
+      text-decoration: none;
+      color: #313131;
+
+      &.active {
+        color: $water !important;
+      }
+
+      p {
+        position: relative;
+
+        margin-top: 10px;
+        padding-left: 20px;
+
+        cursor: pointer;
+        font-size: 14px;
+
+        transition: 0.3s;
+
+        &:hover {
+          color: $water;
+        }
+
+        span {
+          text-transform: capitalize;
+        }
+
+        &::before {
+          display: block;
+          content: "";
+
+          width: 3px;
+          height: 3px;
+          position: absolute;
+          left: 10px;
+          top: 50%;
+
+          border-radius: 50%;
+          background-color: $water;
+
+          transform: translateY(-50%);
+        }
+      }
+    }
+  }
+}
+.root2 {
+  display: none;
+}
+
+@media (max-width: 960px) {
+  .root {
+    display: none;
+  }
+  .root2 {
+    display: block;
+    background: #f4f4f4;
+    padding: 10px;
+    .body {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      margin-top: 10px;
+      h5 {
+        font-size: 15px;
+        text-transform: capitalize;
+        margin-bottom: 0;
+      }
+      a {
+        font-size: 13px;
+        text-decoration: none;
+        color: #313131;
+        font-weight: normal;
+        text-transform: capitalize;
+        padding: 8px 0;
+        display: block;
+      }
+    }
+    button {
+      color: #fff;
+      background: $blue;
+      padding: 8px 10px;
+      border: none;
+      border-radius: 3px;
+    }
+  }
+}

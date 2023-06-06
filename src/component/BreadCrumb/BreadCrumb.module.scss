@@ -1,0 +1,32 @@
+@import "../../colors.scss";
+
+.root {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+
+  font-size: 14px;
+
+  a {
+    color: $blue;
+    display: inline-block;
+
+    &.active {
+      font-weight: 500;
+      color: rgba(0, 0, 0, 0.572);
+      text-decoration: none;
+    }
+  }
+
+  .slash {
+    margin-left: 5px;
+
+    color: $gray;
+  }
+}
+
+@media (max-width: 850px) {
+  .root {
+    display: none;
+  }
+}

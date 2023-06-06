@@ -1,0 +1,60 @@
+.table {
+  min-width: 100%;
+  margin-top: 20px;
+  :root {
+    font-family: sans-serif;
+    padding: 2rem;
+  }
+
+  table {
+    background: #fff;
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  tbody,
+  thead,
+  tr {
+    display: block;
+  }
+
+  th,
+  td {
+    display: block;
+    padding: 12px;
+  }
+  th,
+  td:before {
+    color: slategray;
+    font-weight: regular;
+    font-variant: small-caps;
+    text-transform: capitalize;
+    text-align: left;
+  }
+
+  tr {
+    border-bottom: solid 2px #d1d1d1;
+  }
+  tbody tr:first-of-type {
+    border-top: solid 2px #f2f2f2;
+  }
+
+  tbody tr:nth-of-type(even) {
+    background: #f2f2f2;
+  }
+
+  @media (min-width: 600px) {
+    table,
+    thead,
+    tbody,
+    tr,
+    td,
+    th {
+      display: revert;
+      position: revert;
+    }
+    td:before {
+      content: "";
+    }
+  }
+}

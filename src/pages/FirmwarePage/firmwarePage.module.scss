@@ -1,0 +1,18 @@
+@import "../../colors.scss";
+
+.root {
+  p {
+    color: $darkGray;
+    margin: 20px 0;
+
+    &:nth-child(4) {
+      font-size: 17px;
+      text-decoration: underline;
+    }
+  }
+  .comment {
+    font-size: 14px;
+    font-style: italic;
+    color: $gray;
+  }
+}

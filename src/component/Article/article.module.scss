@@ -1,0 +1,29 @@
+@import "../../colors.scss";
+
+.root {
+  padding-bottom: 10px;
+
+  border-bottom: 1px solid #e6e6e6;
+
+  h5 {
+    margin-bottom: 5px;
+
+    color: $gray;
+  }
+
+  a {
+    text-decoration: none;
+
+    h4 {
+      display: inline-block;
+      margin-top: 10px;
+
+      font-size: 15px;
+      color: $blue;
+    }
+  }
+
+  h3 {
+    margin-bottom: 7px;
+  }
+}

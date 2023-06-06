@@ -1,0 +1,33 @@
+@import "../../colors.scss";
+
+.root {
+  list-style: none;
+
+  li {
+    position: relative;
+
+    margin-top: 10px;
+    padding-left: 20px;
+
+    color: #313131;
+    font-size: 15px;
+
+    transition: 0.3s;
+
+    &::before {
+      display: block;
+      content: "";
+
+      width: 4px;
+      height: 4px;
+      position: absolute;
+      left: 10px;
+      top: 50%;
+
+      border-radius: 50%;
+      background-color: $water;
+
+      transform: translateY(-50%);
+    }
+  }
+}

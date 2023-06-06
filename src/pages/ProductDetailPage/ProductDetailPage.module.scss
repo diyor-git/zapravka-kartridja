@@ -1,0 +1,143 @@
+@import "../../colors.scss";
+
+.ProductDetailPage {
+  .table {
+    margin-top: 50px;
+    p {
+      color: rgb(101, 101, 101);
+      font-size: 13px;
+      margin-top: 20px;
+    }
+    h4 {
+      font-size: 20px;
+    }
+  }
+  .detail {
+    display: grid;
+    margin-top: 40px;
+    grid-template-columns: 380px 1fr;
+    .info {
+      padding-top: 30px;
+      .description {
+        margin-top: 30px;
+        ul {
+          li {
+            font-size: 17px;
+            align-items: flex-start;
+          }
+        }
+        h5 {
+          font-size: 12pt;
+          margin-top: 20px;
+          font-weight: normal;
+          color: rgb(79, 78, 78);
+        }
+        h4 {
+          font-size: 18px;
+          color: rgb(51, 51, 51);
+          font-weight: normal;
+        }
+        a {
+          display: inline-block;
+          margin-top: 15px;
+
+          color: #000;
+          font-size: 17px;
+
+          transition: 0.2s;
+
+          &:hover {
+            color: $blue;
+          }
+        }
+      }
+      .characters {
+        width: 100%;
+
+        .desc {
+          display: flex;
+          justify-content: space-between;
+
+          padding-bottom: 15px;
+
+          div {
+            flex: 1 0;
+            margin: 0 10px;
+
+            border-bottom: 2px dotted rgba(101, 101, 101, 0.64);
+          }
+          h5 {
+            width: max-content;
+            font-weight: 600;
+            color: rgb(101, 101, 101);
+            font-size: 13px;
+          }
+        }
+        h4 {
+          color: #959595;
+          font-size: 14px;
+          border-bottom: 1px dashed #959595;
+          width: max-content;
+        }
+        a {
+          display: inline-block;
+
+          text-decoration: none;
+        }
+      }
+    }
+    .img {
+      img {
+        max-width: 327px;
+        height: 327px;
+        width: 100%;
+        object-fit: contain;
+      }
+    }
+  }
+  h2 {
+    font-size: 23px;
+    font-weight: normal;
+    position: relative;
+    padding-bottom: 20px;
+    &::before {
+      content: "";
+      position: absolute;
+      height: 3px;
+      bottom: 0;
+      width: 90px;
+      background: $blue;
+    }
+  }
+}
+
+@media (max-width: 720px) {
+  .detail {
+    grid-template-columns: 1fr !important;
+
+    .img {
+      margin: 0 auto;
+
+      img {
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .characters {
+    h5 {
+      font-size: 12px !important;
+    }
+  }
+}
+
+@media (max-width: 355px) {
+  .characters {
+    h5{
+      font-size: 11px !important;
+    }
+  }
+}

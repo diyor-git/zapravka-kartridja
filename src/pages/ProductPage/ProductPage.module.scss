@@ -1,0 +1,119 @@
+@import "../../colors.scss";
+
+.productPage {
+  .printers {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+    .notFound {
+      margin: 10px 0 !important;
+      color: red !important;
+      font-size: 20px !important;
+    }
+    .printer {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      padding-top: 20px;
+
+      margin: 0 auto;
+
+      border: 1px solid #dadada;
+      img {
+        width: 100%;
+        object-fit: contain;
+        max-width: 215px;
+        height: 215px;
+      }
+      .text {
+        padding: 0 14px 14px;
+        h4 {
+          padding: 15px 0 15px 0;
+          color: #191919;
+          margin-bottom: 0;
+          letter-spacing: 1px;
+          font-size: 15px;
+        }
+        h5 {
+          font-size: 15px;
+          font-weight: normal;
+        }
+        button {
+          width: 100%;
+          margin-top: 10px;
+          letter-spacing: 1px;
+          color: $blue;
+          text-transform: uppercase;
+          cursor: pointer;
+          padding: 10px;
+          background: none;
+          border: 2px solid $blue;
+          transition: 300ms;
+          &:hover {
+            color: #fff;
+            background: $blue;
+          }
+        }
+      }
+    }
+  }
+  ul {
+    li {
+      color: rgb(101, 101, 101);
+      padding-left: 30px;
+    }
+  }
+
+  .chooseModel {
+    h4 {
+      font-weight: 600;
+      font-size: 17px;
+      letter-spacing: 2px;
+      padding: 0.35rem 0 0.45rem 0;
+      margin: 20px 0;
+      color: #000;
+      text-transform: uppercase;
+    }
+  }
+  .moreInfo {
+    margin: 20px 0 30px 0;
+    h3 {
+      font-size: 13pt;
+    }
+  }
+
+  h4 {
+    font-size: 20px;
+    margin: 15px 0 0 10px;
+    color: #06a4d4;
+  }
+  h2 {
+    font-weight: normal;
+    font-size: 20px;
+    font-size: 1.5rem;
+    position: relative;
+    padding-bottom: 20px;
+    text-transform: uppercase;
+    &::before {
+      content: "";
+      position: absolute;
+      height: 2px;
+      width: 50px;
+      bottom: 0;
+      background: $blue;
+    }
+  }
+}
+
+@media (max-width: 1400px) {
+  .printers {
+    grid-template-columns: 1fr 1fr !important;
+  }
+}
+
+@media (max-width: 650px) {
+  .printers {
+    grid-template-columns: 1fr !important;
+  }
+}

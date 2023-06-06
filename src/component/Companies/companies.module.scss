@@ -1,0 +1,29 @@
+@import "../../colors.scss";
+
+.root {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  flex-wrap: wrap;
+
+  margin: 15px 0;
+  a {
+    padding: 10px 40px;
+    border: 1px solid $gray;
+    text-align: center;
+  }
+}
+
+@media (max-width: 813px) {
+  .root {
+    a {
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 580px) {
+  .root {
+    grid-template-columns: 1fr;
+  }
+}
+

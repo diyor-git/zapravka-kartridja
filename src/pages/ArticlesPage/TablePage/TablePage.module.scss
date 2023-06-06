@@ -1,0 +1,75 @@
+.table {
+  thead,
+  h1,
+  h2 {
+    text-align: center;
+    padding: 5px;
+  }
+  td {
+    max-width: 200px;
+  }
+  table,
+  th,
+  td,
+  tr {
+    border: 1px solid black;
+    padding: 5px;
+    margin: 5px;
+
+    text-align: center;
+    cursor: pointer;
+  }
+  table {
+    background-color: white;
+    width: 850px;
+    box-shadow: 1px 1px 5px black;
+    border-radius: 7px;
+  }
+
+  tt {
+    color: black;
+  }
+  td:hover {
+    background-color: #271f28;
+    color: white;
+  }
+  .subjects {
+    padding: 1.5rem;
+    background-color: #271f28;
+    color: white;
+  }
+  #school {
+    color: blueviolet;
+    text-shadow: 1px 0px 1px black;
+  }
+  @media screen and (max-width: 600px) {
+    tr:nth-child(odd) {
+      background: #00bf735a;
+    }
+
+    tr:nth-child(1) {
+      background-color: #fff;
+    }
+
+    td:hover {
+      background-color: #271f28;
+      color: white;
+    }
+  }
+
+  .addition {
+    width: 90%;
+    margin: 30px 0;
+    padding: 5px 0 5px 20px;
+
+    background-color: rgba(131, 212, 107, 0.542);
+    border-left: 7px solid green;
+  }
+}
+
+@media (max-width: 920px) {
+  .table {
+    width: 90vw !important;
+    overflow-x: auto !important;
+  }
+}

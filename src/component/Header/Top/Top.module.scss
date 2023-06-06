@@ -1,0 +1,62 @@
+@import "../../../colors.scss";
+
+.root {
+  padding: 15px 0;
+
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.116);
+
+  .hamburger,
+  .responseNav {
+    display: none;
+  }
+  .inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    .nav {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+
+      a {
+        color: $blue;
+
+        &.active {
+          text-decoration: none;
+          font-weight: 700;
+          color: $darkBlue;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 705px) {
+  .root {
+    padding: 15px 20px;
+    .nav {
+      display: none !important;
+    }
+    .responseNav {
+      display: block;
+      padding-top: 20px;
+      a {
+        color: #000;
+        text-decoration: none;
+        display: block;
+        padding: 10px;
+        text-transform: uppercase;
+        text-align: center;
+      }
+    }
+    .hamburger {
+      padding: 10px;
+      background: $blue;
+      color: #fff;
+      border-radius: 4px;
+      display: block;
+    }
+  }
+}

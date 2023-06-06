@@ -1,0 +1,17 @@
+@import "../../colors.scss";
+
+.root {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  z-index: 123;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $water;
+  img {
+    width: 100px;
+  }
+}
